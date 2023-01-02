@@ -1,8 +1,16 @@
 import 'package:flutter/material.dart';
-import 'package:purchase_app/shopping_app.dart'; 
+import 'package:flutter/services.dart';
+import 'package:purchase_app/shopping_app.dart';
 
 void main() {
-  runApp(const MyApp());
+  WidgetsFlutterBinding.ensureInitialized();
+  SystemChrome.setPreferredOrientations([
+    DeviceOrientation.portraitUp,
+    DeviceOrientation.portraitDown,
+    // DeviceOrientation.landscapeLeft,
+    // DeviceOrientation.landscapeRight,
+  ]).then((value) => runApp(MyApp()));
+  runApp(MyApp());
 }
 
 class MyApp extends StatelessWidget {
@@ -27,7 +35,6 @@ class MyHomePage extends StatefulWidget {
 }
 
 class _MyHomePageState extends State<MyHomePage> {
-
   @override
   Widget build(BuildContext context) {
     return ShoppingApp();

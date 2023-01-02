@@ -17,10 +17,10 @@ class MyElevatedButton extends StatelessWidget {
     return ElevatedButton(
       child: Text(
         text,
-        style: shopStyle(20, Colors.blue, FontWeight.bold),
+        style: shopStyle(20, Colors.white),
       ),
       onPressed: onPressed,
-      style: ElevatedButton.styleFrom(backgroundColor: Colors.blue.shade200),
+      style: ElevatedButton.styleFrom(backgroundColor: Colors.blue),
     );
   }
 }

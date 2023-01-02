@@ -29,11 +29,11 @@ class _DialogBoxState extends State<DialogBox> {
       child: SingleChildScrollView(
         child: AlertDialog(
           title: Center(
-            child: Text('New Contact'),
+            child: Text('New Item'),
           ),
           // ignore: sized_box_for_whitespace
           content: Container(
-            height: 300,
+            height: 175,
             child: Column(
               mainAxisAlignment: MainAxisAlignment.spaceEvenly,
               children: [

@@ -76,15 +76,22 @@ class _ShoppingAppState extends State<ShoppingApp> {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
+        centerTitle: true,
         title: Text(
           "Items",
-          style: shopStyle(20, Colors.black45, FontWeight.w500),
+          style: shopStyle(20, Colors.white, FontWeight.w500),
         ),
-        actions: [Text(itemcount)],
+        actions: [
+          Center(
+              child: Text(
+            itemcount,
+            style: shopStyle(25),
+          ))
+        ],
       ),
       floatingActionButton: FloatingActionButton(
         child: Icon(Icons.add),
-        onPressed: () {},
+        onPressed: createNewItem,
       ),
     );
   }
